@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>5. Galería Pokémon</title>
+    <link rel="stylesheet" href="estilos2.css">
+    </head>
+<body>
+    <header>
+        <h1>5.Galería Pokémon</h1>
+    </header>
+
+    <main>
+        <div class="controls">
+            <input type="text" id="filtroNombre" placeholder="Filtrar por nombre...">
+            <button onclick="filtrarPokemon()">Aplicar Filtro</button>
+            <button onclick="limpiarFiltro()">Limpiar</button>
+        </div>
+
+        <section id="galeria">
+            </section>
+
+        <div class="pagination">
+            <button id="prevBtn" onclick="cambiarPagina(-1)" disabled>Página Anterior</button>
+            <span id="pageInfo">Página 1</span>
+            <button id="nextBtn" onclick="cambiarPagina(1)">Página Siguiente</button>
+        </div>
+        <p id="loadMessage"></p>
+    </main>
+
+    <script src="script_web.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            cargarPaginaPokemon(1);
+        });
+    </script>
+</body>
+</html>

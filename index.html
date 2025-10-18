@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>4. Buscador Simple de Digimon</title>
+    <link rel="stylesheet" href="estilos.css">
+    </head>
+<body>
+    <header>
+        <h1>4.Buscador de Digimon por Nombre o Nivel</h1>
+    </header>
+
+    <main>
+        <div class="controls">
+            <label for="criterio">Buscar por:</label>
+            <select id="criterio">
+                <option value="name">Nombre Exacto</option>
+                <option value="level">Nivel (Rookie, Mega, etc.)</option>
+            </select>
+            <input type="text" id="valorBusqueda" placeholder="Ej: Agumon o Ultimate">
+            <button onclick="buscarDigimon(event)">Buscar</button>
+        </div>
+
+        <section id="resultsContainer">
+            <h2>Resultados</h2>
+            <table id="resultadosTable">
+                <thead>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Nivel</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    </tbody>
+            </table>
+        </section>
+        <p id="mensajeError" class="error-msg"></p>
+    </main>
+    
+    <script src="script_web.js"></script>
+</body>
+</html>
